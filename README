@@ -1,0 +1,12 @@
+ARDS Core Utilities Re-Implementation
+
+Authors:
+    Adam Roberts
+    Dustin Schoenbrun
+
+To keep their skills sharp, two college buddies are doing something crazy.
+Using their knowledge of POSIX programming, they endeavor to reimplement the
+unix core utilities the only way they know how; with full POSIX compliance and
+multi-threading!
+
+

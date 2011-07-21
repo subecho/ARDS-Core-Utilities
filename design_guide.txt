@@ -1,0 +1,216 @@
+ards_coreutils Design Guide
+Authors: 
+    Dustin Schoenbrun
+    Adam Roberts
+
+This document is meant to be a rough guide to outline the criterion by which the
+completeness of the project will be judged.  There will be five levels of
+completeness for each part of the ards_coreutils.  These levels are defined as
+follows:
+
+Level 0:
+    This level indicates that this part of the ards_coreutils package either has
+    not been started yet or is not yet in a state where it is in Level 1 status.
+
+Level 1:
+    This level indicates that the absolute most basic functionality of the
+    utility have been completed.  Most likely, no command line arguments will be
+    supported at this level.  Error checking will most likely, if implemented at
+    all, be rudimentary.
+
+Level 2:
+    This level indicates that the utility is in a more stable state, with
+    roughly 50% of possible command line arguments implemented and functional.
+    This level will also include some mor robust form of error checking.  This
+    level is roughly analogous to the halfway point of the implementation.
+
+Level 3:
+    This level indicates the completeness of the utility indicated.  All command
+    line parameters are implemented and fully functional.  Error checking should
+    gracefully handle all error possibilities. 
+
+Level 4:
+    This level has the same requirements as Level 3, but is completely
+    POSIX-Compliant to the latest standard (which I should look up).  This level
+    may become optional on some utilities. 
+
+== List of Utilities and their States ==
+**NOTE** The following list is from the "Shells and Utilites" section of "The
+Open Group Base Specifications Issue 6".  Accessed April 12, 2011 at 7:50PM EST. 
+http://pubs.opengroup.org/onlinepubs/009695399/utilities/contents.html
+
+--Name--    --Level 0-- --Level 1-- --Level 2-- --Level 3-- --Level 4--
+admin           [ ]         [ ]         [ ]         [ ]         [ ]
+alias           [ ]         [ ]         [ ]         [ ]         [ ]
+ar              [ ]         [ ]         [ ]         [ ]         [ ]
+asa             [ ]         [ ]         [ ]         [ ]         [ ]
+at              [ ]         [ ]         [ ]         [ ]         [ ]
+awk             [ ]         [ ]         [ ]         [ ]         [ ]
+basename        [ ]         [ ]         [ ]         [ ]         [ ]
+batch           [ ]         [ ]         [ ]         [ ]         [ ]
+bc              [ ]         [ ]         [ ]         [ ]         [ ]
+bg              [ ]         [ ]         [ ]         [ ]         [ ]
+break           [ ]         [ ]         [ ]         [ ]         [ ]
+c99             [ ]         [ ]         [ ]         [ ]         [ ]
+cal             [ ]         [ ]         [ ]         [ ]         [ ]
+cat             [ ]         [ ]         [ ]         [ ]         [ ]
+cd              [ ]         [ ]         [ ]         [ ]         [ ]
+cflow           [ ]         [ ]         [ ]         [ ]         [ ]
+chgrp           [ ]         [ ]         [ ]         [ ]         [ ]
+chmod           [ ]         [ ]         [ ]         [ ]         [ ]
+chown           [ ]         [ ]         [ ]         [ ]         [ ]
+cksum           [ ]         [ ]         [ ]         [ ]         [ ]
+cmp             [ ]         [ ]         [ ]         [ ]         [ ]
+colon           [ ]         [ ]         [ ]         [ ]         [ ]
+comm            [ ]         [ ]         [ ]         [ ]         [ ]
+command         [ ]         [ ]         [ ]         [ ]         [ ]
+compress        [ ]         [ ]         [ ]         [ ]         [ ]
+continue        [ ]         [ ]         [ ]         [ ]         [ ]
+cp              [ ]         [ ]         [ ]         [ ]         [ ]
+crontab         [ ]         [ ]         [ ]         [ ]         [ ]
+csplit          [ ]         [ ]         [ ]         [ ]         [ ]
+ctags           [ ]         [ ]         [ ]         [ ]         [ ]
+cut             [ ]         [ ]         [ ]         [ ]         [ ]
+cxref           [ ]         [ ]         [ ]         [ ]         [ ]
+date            [ ]         [ ]         [ ]         [ ]         [ ]
+dd              [ ]         [ ]         [ ]         [ ]         [ ]
+diff            [ ]         [ ]         [ ]         [ ]         [ ]
+dirname         [ ]         [ ]         [ ]         [ ]         [ ]
+dot             [ ]         [ ]         [ ]         [ ]         [ ]
+du              [ ]         [ ]         [ ]         [ ]         [ ]
+echo            [ ]         [ ]         [ ]         [ ]         [ ]
+ed              [ ]         [ ]         [ ]         [ ]         [ ]
+env             [ ]         [ ]         [ ]         [ ]         [ ]
+eval            [ ]         [ ]         [ ]         [ ]         [ ]
+ex              [ ]         [ ]         [ ]         [ ]         [ ]
+exec            [ ]         [ ]         [ ]         [ ]         [ ]
+exit            [ ]         [ ]         [ ]         [ ]         [ ]
+expand          [ ]         [ ]         [ ]         [ ]         [ ]
+export          [ ]         [ ]         [ ]         [ ]         [ ]
+expr            [ ]         [ ]         [ ]         [ ]         [ ]
+false           [ ]         [ ]         [ ]         [ ]         [ ]
+fc              [ ]         [ ]         [ ]         [ ]         [ ]
+fg              [ ]         [ ]         [ ]         [ ]         [ ]
+file            [ ]         [ ]         [ ]         [ ]         [ ]
+find            [ ]         [ ]         [ ]         [ ]         [ ]
+fold            [ ]         [ ]         [ ]         [ ]         [ ]
+fort77          [ ]         [ ]         [ ]         [ ]         [ ]
+fuser           [ ]         [ ]         [ ]         [ ]         [ ]
+gencat          [ ]         [ ]         [ ]         [ ]         [ ]
+get             [ ]         [ ]         [ ]         [ ]         [ ]
+getconf         [ ]         [ ]         [ ]         [ ]         [ ]
+getopts         [ ]         [ ]         [ ]         [ ]         [ ]
+grep            [ ]         [ ]         [ ]         [ ]         [ ]
+hash            [ ]         [ ]         [ ]         [ ]         [ ]
+head            [ ]         [ ]         [ ]         [ ]         [ ]
+iconv           [ ]         [ ]         [ ]         [ ]         [ ]
+id              [ ]         [ ]         [ ]         [ ]         [ ]
+ipcrm           [ ]         [ ]         [ ]         [ ]         [ ]
+ipcs            [ ]         [ ]         [ ]         [ ]         [ ]
+jobs            [ ]         [ ]         [ ]         [ ]         [ ]
+join            [ ]         [ ]         [ ]         [ ]         [ ]
+kill            [ ]         [ ]         [ ]         [ ]         [ ]
+lex             [ ]         [ ]         [ ]         [ ]         [ ]
+link            [ ]         [ ]         [ ]         [ ]         [ ]
+ln              [ ]         [ ]         [ ]         [ ]         [ ]
+locale          [ ]         [ ]         [ ]         [ ]         [ ]
+localedef       [ ]         [ ]         [ ]         [ ]         [ ]
+logger          [ ]         [ ]         [ ]         [ ]         [ ]
+logname         [ ]         [ ]         [ ]         [ ]         [ ]
+lp              [ ]         [ ]         [ ]         [ ]         [ ]
+ls              [ ]         [ ]         [ ]         [ ]         [ ]
+m4              [ ]         [ ]         [ ]         [ ]         [ ]
+mailx           [ ]         [ ]         [ ]         [ ]         [ ]
+make            [ ]         [ ]         [ ]         [ ]         [ ]
+man             [ ]         [ ]         [ ]         [ ]         [ ]
+mesg            [ ]         [ ]         [ ]         [ ]         [ ]
+mkdir           [ ]         [ ]         [ ]         [ ]         [ ]
+mkfifo          [ ]         [ ]         [ ]         [ ]         [ ]
+more            [ ]         [ ]         [ ]         [ ]         [ ]
+mv              [ ]         [ ]         [ ]         [ ]         [ ]
+newgrp          [ ]         [ ]         [ ]         [ ]         [ ]
+nice            [ ]         [ ]         [ ]         [ ]         [ ]
+nl              [ ]         [ ]         [ ]         [ ]         [ ]
+nm              [ ]         [ ]         [ ]         [ ]         [ ]
+nohup           [ ]         [ ]         [ ]         [ ]         [ ]
+od              [ ]         [ ]         [ ]         [ ]         [ ]
+paste           [ ]         [ ]         [ ]         [ ]         [ ]
+patch           [ ]         [ ]         [ ]         [ ]         [ ]
+pathchk         [ ]         [ ]         [ ]         [ ]         [ ]
+pax             [ ]         [ ]         [ ]         [ ]         [ ]
+pr              [ ]         [ ]         [ ]         [ ]         [ ]
+printf          [ ]         [ ]         [ ]         [ ]         [ ]
+prs             [ ]         [ ]         [ ]         [ ]         [ ]
+ps              [ ]         [ ]         [ ]         [ ]         [ ]
+pwd             [ ]         [ ]         [ ]         [ ]         [ ]
+qalter          [ ]         [ ]         [ ]         [ ]         [ ]
+qdel            [ ]         [ ]         [ ]         [ ]         [ ]
+qhold           [ ]         [ ]         [ ]         [ ]         [ ]
+qmove           [ ]         [ ]         [ ]         [ ]         [ ]
+qmsg            [ ]         [ ]         [ ]         [ ]         [ ]
+qrerun          [ ]         [ ]         [ ]         [ ]         [ ]
+qrls            [ ]         [ ]         [ ]         [ ]         [ ]
+qselect         [ ]         [ ]         [ ]         [ ]         [ ]
+qsig            [ ]         [ ]         [ ]         [ ]         [ ]
+qstat           [ ]         [ ]         [ ]         [ ]         [ ]
+qsub            [ ]         [ ]         [ ]         [ ]         [ ]
+read            [ ]         [ ]         [ ]         [ ]         [ ]
+readonly        [ ]         [ ]         [ ]         [ ]         [ ]
+renice          [ ]         [ ]         [ ]         [ ]         [ ]
+return          [ ]         [ ]         [ ]         [ ]         [ ]
+rm              [ ]         [ ]         [ ]         [ ]         [ ]
+rmdel           [ ]         [ ]         [ ]         [ ]         [ ]
+rmdir           [ ]         [ ]         [ ]         [ ]         [ ]
+sact            [ ]         [ ]         [ ]         [ ]         [ ]
+sccs            [ ]         [ ]         [ ]         [ ]         [ ]
+sed             [ ]         [ ]         [ ]         [ ]         [ ]
+set             [ ]         [ ]         [ ]         [ ]         [ ]
+sh              [ ]         [ ]         [ ]         [ ]         [ ]
+shift           [ ]         [ ]         [ ]         [ ]         [ ]
+sleep           [ ]         [ ]         [ ]         [ ]         [ ]
+sort            [ ]         [ ]         [ ]         [ ]         [ ]
+split           [ ]         [ ]         [ ]         [ ]         [ ]
+strings         [ ]         [ ]         [ ]         [ ]         [ ]
+strip           [ ]         [ ]         [ ]         [ ]         [ ]
+stty            [ ]         [ ]         [ ]         [ ]         [ ]
+tabs            [ ]         [ ]         [ ]         [ ]         [ ]
+tail            [ ]         [ ]         [ ]         [ ]         [ ]
+talk            [ ]         [ ]         [ ]         [ ]         [ ]
+tee             [ ]         [ ]         [ ]         [ ]         [ ]
+test            [ ]         [ ]         [ ]         [ ]         [ ]
+time            [ ]         [ ]         [ ]         [ ]         [ ]
+times           [ ]         [ ]         [ ]         [ ]         [ ]
+touch           [ ]         [ ]         [ ]         [ ]         [ ]
+tput            [ ]         [ ]         [ ]         [ ]         [ ]
+tr              [ ]         [ ]         [ ]         [ ]         [ ]
+trap            [ ]         [ ]         [ ]         [ ]         [ ]
+true            [ ]         [ ]         [ ]         [ ]         [ ]
+tsort           [ ]         [ ]         [ ]         [ ]         [ ]
+tty             [ ]         [ ]         [ ]         [ ]         [ ]
+type            [ ]         [ ]         [ ]         [ ]         [ ]
+ulimit          [ ]         [ ]         [ ]         [ ]         [ ]
+umask           [ ]         [ ]         [ ]         [ ]         [ ]
+unalias         [ ]         [ ]         [ ]         [ ]         [ ]
+uname           [ ]         [ ]         [ ]         [ ]         [ ]
+uncompress      [ ]         [ ]         [ ]         [ ]         [ ]
+unexpand        [ ]         [ ]         [ ]         [ ]         [ ]
+unget           [ ]         [ ]         [ ]         [ ]         [ ]
+uniq            [ ]         [ ]         [ ]         [ ]         [ ]
+unlink          [ ]         [ ]         [ ]         [ ]         [ ]
+unset           [ ]         [ ]         [ ]         [ ]         [ ]
+uucp            [ ]         [ ]         [ ]         [ ]         [ ]
+uudecode        [ ]         [ ]         [ ]         [ ]         [ ]
+uuencode        [ ]         [ ]         [ ]         [ ]         [ ]
+uustat          [ ]         [ ]         [ ]         [ ]         [ ]
+uux             [ ]         [ ]         [ ]         [ ]         [ ]
+val             [ ]         [ ]         [ ]         [ ]         [ ]
+vi              [ ]         [ ]         [ ]         [ ]         [ ]
+wait            [ ]         [ ]         [ ]         [ ]         [ ]
+wc              [ ]         [ ]         [ ]         [ ]         [ ]
+what            [ ]         [ ]         [ ]         [ ]         [ ]
+who             [ ]         [ ]         [ ]         [ ]         [ ]
+write           [ ]         [ ]         [ ]         [ ]         [ ]
+xargs           [ ]         [ ]         [ ]         [ ]         [ ]
+yacc            [ ]         [ ]         [ ]         [ ]         [ ]
+zcat            [ ]         [ ]         [ ]         [ ]         [ ]
+
